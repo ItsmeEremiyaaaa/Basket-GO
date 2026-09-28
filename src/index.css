@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap');
+@import 'tailwindcss';
+
+:root{
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Baloo 2', sans-serif;
+  --color-forest: #1B4D3E;
+  --color-forest-dark: #123529;
+  --color-forest-mid: #2a6b57;
+  --color-lime: #C8E85C;
+  --color-lime-dark: #aecf3e;
+  --color-offwhite: #F7F7F5;
+  --color-charcoal: #1C2820;
+  --shadow-sm: 0 6px 18px rgba(16,24,32,0.06);
+  --shadow-lg: 0 20px 60px rgba(2,6,23,0.18);
+}
+
+/* Small UX & accessibility helpers */
+*, *::before, *::after { box-sizing: border-box }
+*{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+*{scrollbar-width:none}
+*::-webkit-scrollbar{display:none}
+
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:var(--color-offwhite);
+  font-family:var(--font-sans);
+  color:var(--color-charcoal);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Image defaults for better loading and layout stability */
+img{display:block;max-width:100%;height:auto;object-fit:cover}
+img[loading="lazy"]{will-change:transform,opacity}
+
+/* Utility tokens to keep inline styles minimal */
+.bg-forest{background:var(--color-forest)}
+.text-forest{color:var(--color-forest)}
+.text-lime{color:var(--color-lime)}
+.bg-lime{background:var(--color-lime)}
+.text-charcoal{color:var(--color-charcoal)}
+.shadow-soft{box-shadow:var(--shadow-sm)}
+.shadow-deep{box-shadow:var(--shadow-lg)}
+
+/* Small responsive helpers */
+.font-display{font-family:var(--font-display)}

@@ -1,0 +1,25 @@
+{
+  "overrides": [
+    {
+      "files": ["**/*.css"],
+      "customSyntax": "postcss-syntax",
+      "rules": {
+        "at-rule-allowed-list": [
+          "import",
+          "theme",
+          "layer",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "keyframes",
+          "font-face",
+          "media",
+          "supports",
+          "container",
+          "scope"
+        ]
+      }
+    }
+  ]
+}

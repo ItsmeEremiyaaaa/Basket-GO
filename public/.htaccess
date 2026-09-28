@@ -1,0 +1,19 @@
+# Correct MIME types for product image formats InfinityFree doesn't map by default
+AddType image/jpeg .jpg .jpeg .jpe .jfif
+AddType image/png .png
+AddType image/webp .webp
+AddType image/avif .avif
+AddType image/gif .gif
+AddType image/svg+xml .svg
+
+RewriteEngine On
+
+# Serve real files/directories as-is (JS/CSS bundles, images, and the
+# entire /api/*.php tree all match here and are never rewritten)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else (including direct navigation to /admin) falls back
+# to the SPA shell so client-side routing can take over
+RewriteRule ^ index.html [L]

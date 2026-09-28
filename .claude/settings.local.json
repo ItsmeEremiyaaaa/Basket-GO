@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(curl.exe -s \"ftp://ftpupload.net/\" -u $user -Q \"DELE htdocs/assets/index-D__xbr21.css\" -Q \"DELE htdocs/assets/index-DAWtAglz.js\" -Q \"DELE htdocs/assets/category-Cxvfp7RR.js\" --connect-timeout 20)",
+      "PowerShell(curl.exe -s --list-only \"ftp://ftpupload.net/htdocs/assets/\" -u $user --connect-timeout 15)",
+      "PowerShell(curl.exe -s -T \"c:\\\\Users\\\\Iam\\\\Downloads\\\\E-Commerce-20260726T122651Z-1-001\\\\E-Commerce\\\\server\\\\admin\\\\orders.php\" \"ftp://ftpupload.net/htdocs/api/admin/orders.php\" -u $user --connect-timeout 20)",
+      "PowerShell(curl.exe -s -I \"ftp://ftpupload.net/htdocs/api/admin/orders.php\" -u $user --connect-timeout 15)",
+      "PowerShell(curl.exe -s -T \"c:\\\\Users\\\\Iam\\\\Downloads\\\\E-Commerce-20260726T122651Z-1-001\\\\E-Commerce\\\\server\\\\admin\\\\riders.php\" \"ftp://ftpupload.net/htdocs/api/admin/riders.php\" -u $user --connect-timeout 20)",
+      "PowerShell(curl.exe -s -I \"ftp://ftpupload.net/htdocs/api/admin/riders.php\" -u $user --connect-timeout 15)",
+      "PowerShell(curl.exe -s \"ftp://ftpupload.net/htdocs/index.html\" -u $user --connect-timeout 15)",
+      "PowerShell(curl.exe -s \"ftp://ftpupload.net/\" -u $user -Q \"DELE htdocs/assets/index-CKCF4aJP.js\" -Q \"DELE htdocs/assets/category-BXyG6X4q.js\" --connect-timeout 20)"
+    ]
+  }
+}
